@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    android:label="Home"
+    app:startDestination="@id/oneFragment">
+
+    <fragment
+        android:id="@+id/oneFragment"
+        android:name="de.syntaxinstitut.dogcrounding.ui.one.OneFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_one">
+        <action
+            android:id="@+id/action_oneFragment_to_twoFragment"
+            app:destination="@id/twoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/twoFragment"
+        android:name="de.syntaxinstitut.dogcrounding.ui.two.TwoFragment"
+        android:label="Detail"
+        tools:layout="@layout/fragment_two" >
+        <action
+            android:id="@+id/action_twoFragment_to_dogFriendFragment"
+            app:destination="@id/dogFriendFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dogFriendFragment"
+        android:name="de.syntaxinstitut.dogcrounding.ui.three.DogFriendFragment"
+        android:label="fragment_dog_friend"
+        tools:layout="@layout/fragment_dog_friend" >
+        <action
+            android:id="@+id/action_dogFriendFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="de.syntaxinstitut.dogcrounding.ui.four.MenuFragment"
+        android:label="fragment_menu" />
+</navigation>

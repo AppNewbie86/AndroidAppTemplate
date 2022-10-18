@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFE0B2"
+        tools:context=".DogFriendFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/form"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/aclonica"
+                android:text="choose from our trusted Dogfriend"
+                android:textColor="#D0732B"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="@+id/imageView"
+                app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="262dp"
+                android:layout_height="136dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/aclonica"
+                android:text="Loving, experienced pet sitter"
+                android:textColor="#0C0C0C"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:src="@drawable/ellipse"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/aclonica"
+                android:text="Ayden Garrett"
+                android:textColor="#090808"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/imageView2"
+                app:layout_constraintStart_toStartOf="@+id/imageView2"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:src="@drawable/frame_33526"
+                app:layout_constraintEnd_toEndOf="@+id/textView3"
+                app:layout_constraintStart_toStartOf="@+id/textView3"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Munich, 2 Miles, Away"
+                android:textColor="#FF9800"
+                app:layout_constraintEnd_toEndOf="@+id/textView3"
+                app:layout_constraintStart_toStartOf="@+id/textView3"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+
+            <Button
+                android:id="@+id/info_Btn"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginBottom="140dp"
+                android:elevation="5dp"
+                android:text="Info"
+                android:textColor="#0C0B0B"
+                android:textColorHint="#0B0A0A"
+                app:layout_constraintBottom_toTopOf="@+id/menuBtn"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/feedback_Btn"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="5dp"
+                android:text="Feedback"
+                android:textColor="#AEADAD"
+                app:layout_constraintBottom_toBottomOf="@+id/info_Btn"
+                app:layout_constraintStart_toEndOf="@+id/info_Btn"
+                app:layout_constraintTop_toTopOf="@+id/info_Btn" />
+
+            <Button
+                android:id="@+id/services_Btn"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="5dp"
+                android:text="Services"
+                android:textColor="#AEADAD"
+                app:layout_constraintBottom_toBottomOf="@+id/feedback_Btn"
+                app:layout_constraintStart_toEndOf="@+id/feedback_Btn"
+                app:layout_constraintTop_toTopOf="@+id/feedback_Btn" />
+
+            <Button
+                android:id="@+id/menuBtn"
+                android:layout_width="370dp"
+                android:layout_height="60dp"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#915303"
+                android:text="Button"
+                app:cornerRadius="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="188dp"
+                android:layout_height="119dp"
+                android:layout_marginStart="50dp"
+                android:src="@drawable/info_bild"
+                app:layout_constraintBottom_toTopOf="@+id/menuBtn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/feedback_Btn" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="397dp"
+                android:layout_height="136dp"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/feedback_text"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/info_Btn" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="210dp"
+                android:layout_height="115dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/services"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/services_Btn"
+                app:layout_constraintTop_toBottomOf="@+id/services_Btn" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+
+</layout>
