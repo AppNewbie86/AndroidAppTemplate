@@ -10,7 +10,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#FFE0B2"
+        android:background="@drawable/cocker_spaniel_2785074"
         tools:context=".DogFriendFragment">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -109,36 +109,45 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
                 android:layout_marginBottom="140dp"
+                android:backgroundTint="#9400B8D4"
                 android:elevation="5dp"
                 android:text="Info"
                 android:textColor="#0C0B0B"
                 android:textColorHint="#0B0A0A"
+                app:cornerRadius="5dp"
                 app:layout_constraintBottom_toTopOf="@+id/menuBtn"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:strokeColor="#FF6D00" />
 
             <Button
                 android:id="@+id/feedback_Btn"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:backgroundTint="#9400B8D4"
                 android:elevation="5dp"
                 android:text="Feedback"
                 android:textColor="#AEADAD"
+                app:cornerRadius="5dp"
                 app:layout_constraintBottom_toBottomOf="@+id/info_Btn"
                 app:layout_constraintStart_toEndOf="@+id/info_Btn"
-                app:layout_constraintTop_toTopOf="@+id/info_Btn" />
+                app:layout_constraintTop_toTopOf="@+id/info_Btn"
+                app:strokeColor="#FF6D00" />
 
             <Button
                 android:id="@+id/services_Btn"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:backgroundTint="#9400B8D4"
                 android:elevation="5dp"
                 android:text="Services"
                 android:textColor="#AEADAD"
+                app:cornerRadius="5dp"
                 app:layout_constraintBottom_toBottomOf="@+id/feedback_Btn"
                 app:layout_constraintStart_toEndOf="@+id/feedback_Btn"
-                app:layout_constraintTop_toTopOf="@+id/feedback_Btn" />
+                app:layout_constraintTop_toTopOf="@+id/feedback_Btn"
+                app:strokeColor="#FF6D00" />
 
             <Button
                 android:id="@+id/menuBtn"
@@ -146,7 +155,7 @@
                 android:layout_height="60dp"
                 android:layout_marginBottom="8dp"
                 android:backgroundTint="#915303"
-                android:text="Button"
+                android:text="What can we do ?"
                 app:cornerRadius="30dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -157,6 +166,7 @@
                 android:layout_width="188dp"
                 android:layout_height="119dp"
                 android:layout_marginStart="50dp"
+                android:alpha="0"
                 android:src="@drawable/info_bild"
                 app:layout_constraintBottom_toTopOf="@+id/menuBtn"
                 app:layout_constraintStart_toStartOf="parent"
@@ -167,8 +177,9 @@
                 android:layout_width="397dp"
                 android:layout_height="136dp"
                 android:layout_marginTop="4dp"
+                android:alpha="0"
                 android:src="@drawable/feedback_text"
-                android:visibility="gone"
+                android:visibility="visible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/info_Btn" />
@@ -178,10 +189,23 @@
                 android:layout_width="210dp"
                 android:layout_height="115dp"
                 android:layout_marginTop="16dp"
+                android:alpha="0"
                 android:src="@drawable/services"
-                android:visibility="gone"
+                android:visibility="visible"
                 app:layout_constraintEnd_toEndOf="@+id/services_Btn"
                 app:layout_constraintTop_toBottomOf="@+id/services_Btn" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="308dp"
+                android:layout_marginEnd="308dp"
+                android:backgroundTint="#1BC51162"
+                android:textColor="#F6F3F3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/location" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

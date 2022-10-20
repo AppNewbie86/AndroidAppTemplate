@@ -10,7 +10,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#81733E">
+        android:background="@drawable/pfoten"
+        android:backgroundTint="#2E2424">
 
 
         <Button
@@ -87,6 +88,18 @@
                 android:layout_height="wrap_content"
                 android:hint="Passwort eingeben" />
         </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="377dp"
+            android:layout_height="137dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="21dp"
+            app:layout_constraintBottom_toTopOf="@+id/emaillayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            app:srcCompat="@drawable/heart_rate_1375324" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

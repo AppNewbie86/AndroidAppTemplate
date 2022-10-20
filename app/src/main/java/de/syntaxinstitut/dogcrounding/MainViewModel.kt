@@ -10,11 +10,16 @@ import androidx.lifecycle.MutableLiveData
 class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     /* -------------------- Klassen Variablen -------------------- */
-	
+
     /** Signal um zu signalisieren, dass zum zweiten Fragment gewechselt werden soll */
     var navigateToFragmentTwo = MutableLiveData(false)
     var navigateToFragmentDogFriendFragment = MutableLiveData(false)
     var navigateToFragmentMenuFragment = MutableLiveData(false)
+    var navigateToFragmentVisitFragment = MutableLiveData(false)
+    var navigateToFragmentChatBotFragment = MutableLiveData(false)
+    var navigateToFragmentBoardingFragment = MutableLiveData(false)
+    var navigateToFragmentDayCareFragment = MutableLiveData(false)
+    var navigateToFragmentVideoFragment = MutableLiveData(false)
 
     /* -------------------- Öffentliche Funktionen -------------------- */
 
@@ -40,6 +45,10 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     }
 
+    fun resetAllValues3() {
+        navigateToFragmentDogFriendFragment.value = false
+    }
+
     /**
      * Mit dieser Funktion wird der Trigger ausgelöst um zum dritten Fragment zu wechseln
      */
@@ -47,6 +56,33 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         navigateToFragmentMenuFragment.value = true
 
     }
+
+    fun navigateToFragmentVisit() {
+        navigateToFragmentVisitFragment.value = true
+
+    }
+
+    fun navigateToFragmentChatBot() {
+        navigateToFragmentChatBotFragment.value = true
+
+    }
+
+    fun navigateToFragmentBoarding() {
+        navigateToFragmentBoardingFragment.value = true
+
+    }
+
+    fun navigateToFragmentDayCare() {
+        navigateToFragmentDayCareFragment.value = true
+
+    }
+
+    fun navigateToFragmentVideo() {
+        navigateToFragmentVideoFragment.value = true
+
+    }
+
+
 
 
 }

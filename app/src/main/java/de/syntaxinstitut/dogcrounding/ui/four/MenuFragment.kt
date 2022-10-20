@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import de.syntaxinstitut.dogcrounding.MainViewModel
 import de.syntaxinstitut.dogcrounding.databinding.FragmentMenuBinding
 
@@ -48,6 +49,40 @@ class MenuFragment : Fragment() {
 
         /* -------------------- UI-Interaktionen -------------------- */
 
+        binding.visitdogImage.setOnClickListener {
+            findNavController().navigate(
+                MenuFragmentDirections.actionMenuFragmentToVisitFragment()
+            )
+
+        }
+
+        binding.chatbotImage.setOnClickListener {
+            findNavController().navigate(
+                MenuFragmentDirections.actionMenuFragmentToChatBotFragment()
+            )
+
+        }
+
+        binding.boardingImage.setOnClickListener {
+            findNavController().navigate(
+            MenuFragmentDirections.actionMenuFragmentToBoardingFragment()
+            )
+
+        }
+
+        binding.daycareImage.setOnClickListener {
+            findNavController().navigate(
+                MenuFragmentDirections.actionMenuFragmentToDayCareFragment()
+            )
+
+        }
+
+        binding.dogtrainingImage.setOnClickListener {
+            findNavController().navigate(
+                MenuFragmentDirections.actionMenuFragmentToVideoFragment()
+            )
+
+        }
 
     }
 }

@@ -10,7 +10,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/rectangle_4203">
+        android:background="@drawable/paw_312322"
+        android:backgroundTint="#EDDEDE">
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayout"
@@ -28,7 +29,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/edt_background"
-                android:backgroundTint="#F4F2F2"
+                android:backgroundTint="#A6A4A4"
                 android:foregroundGravity="center"
                 android:hint="Benutzername" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -49,7 +50,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/edt_background"
-                android:backgroundTint="#C1BEBE"
+                android:backgroundTint="#FFA6A4A4"
                 android:hint="Passwort"
                 android:textColor="#150E0E" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -86,7 +87,7 @@
             android:layout_marginTop="80dp"
             android:fontFamily="@font/aclonica"
             android:text="Welcome to"
-            android:textColor="#050505"
+            android:textColor="#D50000"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -101,7 +102,7 @@
             android:elevation="15dp"
             android:fontFamily="@font/aclonica"
             android:text="DogCrounding"
-            android:textColor="#612C2C"
+            android:textColor="#00B8D4"
             android:textSize="40sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -115,6 +116,7 @@
             android:layout_marginTop="72dp"
             android:fontFamily="@font/aclonica"
             android:text="because we love our animals"
+            android:textColor="#FF6D00"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="@+id/title_text2"
             app:layout_constraintHorizontal_bias="0.496"
