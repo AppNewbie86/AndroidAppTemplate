@@ -1,25 +1,56 @@
 package de.syntaxinstitut.dogcrounding
 
-import android.app.Application
-import androidx.lifecycle.AndroidViewModel
+import android.util.Log
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import de.syntaxinstitut.dogcrounding.data.AppRepository
+import de.syntaxinstitut.dogcrounding.data.remote.DogApi
+import kotlinx.coroutines.launch
 
-/**
- * Das MainViewModel
- */
-class MainViewModel(application: Application) : AndroidViewModel(application) {
+const val TAG = "MainViewModel"
+
+enum class ApiStatus { LOADING, ERROR, DONE }
+
+class MainViewModel : ViewModel() {
+
+    private val repository = AppRepository(DogApi)
+
+    private val _loading = MutableLiveData<ApiStatus>()
+    val loading: LiveData<ApiStatus>
+        get() = _loading
+
+    val dogImages: LiveData<List<String>> = repository.imageList
+
+    init {
+        loadData()
+    }
+
+    private fun loadData() {
+        viewModelScope.launch {
+            _loading.value = ApiStatus.LOADING
+            try {
+                repository.getImages()
+
+                // landet nur hier wenns funktioniert
+                _loading.value = ApiStatus.DONE
+
+            } catch (e: Exception) {
+                // Exeption mit Infotext
+                Log.e(TAG, "Error loading Data from API: $e")
+                _loading.value = ApiStatus.ERROR
+            }
+        }
+    }
 
     /* -------------------- Klassen Variablen -------------------- */
 
     /** Signal um zu signalisieren, dass zum zweiten Fragment gewechselt werden soll */
     var navigateToFragmentTwo = MutableLiveData(false)
-    var navigateToFragmentDogFriendFragment = MutableLiveData(false)
-    var navigateToFragmentMenuFragment = MutableLiveData(false)
-    var navigateToFragmentVisitFragment = MutableLiveData(false)
     var navigateToFragmentChatBotFragment = MutableLiveData(false)
     var navigateToFragmentBoardingFragment = MutableLiveData(false)
     var navigateToFragmentDayCareFragment = MutableLiveData(false)
-    var navigateToFragmentVideoFragment = MutableLiveData(false)
 
     /* -------------------- Öffentliche Funktionen -------------------- */
 
@@ -36,6 +67,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     fun resetAllValues() {
         navigateToFragmentTwo.value = false
     }
+    var navigateToFragmentDogFriendFragment = MutableLiveData(false)
 
     /**
      * Mit dieser Funktion wird der Trigger ausgelöst um zum dritten Fragment zu wechseln
@@ -48,6 +80,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     fun resetAllValues3() {
         navigateToFragmentDogFriendFragment.value = false
     }
+    var navigateToFragmentMenuFragment = MutableLiveData(false)
 
     /**
      * Mit dieser Funktion wird der Trigger ausgelöst um zum dritten Fragment zu wechseln
@@ -57,30 +90,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     }
 
-    fun navigateToFragmentVisit() {
-        navigateToFragmentVisitFragment.value = true
-
-    }
-
-    fun navigateToFragmentChatBot() {
-        navigateToFragmentChatBotFragment.value = true
-
-    }
-
-    fun navigateToFragmentBoarding() {
-        navigateToFragmentBoardingFragment.value = true
-
-    }
-
-    fun navigateToFragmentDayCare() {
-        navigateToFragmentDayCareFragment.value = true
-
-    }
-
-    fun navigateToFragmentVideo() {
-        navigateToFragmentVideoFragment.value = true
-
-    }
 
 
 

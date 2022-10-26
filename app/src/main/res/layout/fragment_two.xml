@@ -14,40 +14,48 @@
         android:backgroundTint="#2E2424">
 
 
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="413dp"
+            android:layout_height="731dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/adroidskill2" />
+
         <Button
             android:id="@+id/btnSignUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
             android:layout_marginBottom="32dp"
-            android:backgroundTint="#603901"
-            android:text="Sign Up"
-            android:textColor="#FAF8F8"
+            android:backgroundTint="#FFAB00"
+            android:elevation="18dp"
 
+            android:text="Register"
+            android:textColor="#FAF8F8"
             android:textSize="20sp"
+            app:cornerRadius="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent" />
-
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:fontFamily="@font/amethysta"
-            android:text="Create a DogFriendAccount"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/emaillayout"
             android:layout_width="294dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="180dp"
+            android:layout_marginTop="185dp"
             android:textColorHint="#9DED7A"
+            app:boxCornerRadiusBottomEnd="18dp"
+            app:boxCornerRadiusBottomStart="18dp"
+            app:boxCornerRadiusTopEnd="18dp"
+            app:boxCornerRadiusTopStart="18dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView5">
@@ -62,23 +70,32 @@
             android:id="@+id/benutzernamenlayout"
             android:layout_width="0dp"
             android:layout_height="60dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="24dp"
             android:textColorHint="#9DED7A"
+            app:boxCornerRadiusBottomEnd="18dp"
+            app:boxCornerRadiusBottomStart="18dp"
+            app:boxCornerRadiusTopEnd="18dp"
+            app:boxCornerRadiusTopStart="8dp"
             app:layout_constraintEnd_toEndOf="@+id/emaillayout"
             app:layout_constraintStart_toStartOf="@+id/emaillayout"
             app:layout_constraintTop_toBottomOf="@+id/emaillayout">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:hint="Benutzernamen eingeben" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="24dp"
             android:textColorHint="#9DED7A"
+            app:boxCornerRadiusBottomEnd="18dp"
+            app:boxCornerRadiusBottomStart="18dp"
+            app:boxCornerRadiusTopEnd="18dp"
+            app:boxCornerRadiusTopStart="18dp"
             app:layout_constraintEnd_toEndOf="@+id/benutzernamenlayout"
             app:layout_constraintStart_toStartOf="@+id/benutzernamenlayout"
             app:layout_constraintTop_toBottomOf="@+id/benutzernamenlayout">
@@ -91,15 +108,61 @@
 
         <ImageView
             android:id="@+id/imageView14"
-            android:layout_width="377dp"
-            android:layout_height="137dp"
-            android:layout_marginTop="22dp"
-            android:layout_marginBottom="21dp"
+            android:layout_width="373dp"
+            android:layout_height="170dp"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
             app:layout_constraintBottom_toTopOf="@+id/emaillayout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView5"
-            app:srcCompat="@drawable/heart_rate_1375324" />
+            app:srcCompat="@drawable/logo1" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/amethysta"
+            android:text="Create a Account"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="149dp"
+            android:layout_height="83dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
+
+            <RadioButton
+                android:id="@+id/radioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="HundeHalter" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="HundeFreund" />
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/imageView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            app:layout_constraintBottom_toBottomOf="@+id/radioGroup"
+            app:layout_constraintStart_toEndOf="@+id/radioGroup"
+            app:layout_constraintTop_toTopOf="@+id/radioGroup"
+            app:srcCompat="@drawable/ellipse_3" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

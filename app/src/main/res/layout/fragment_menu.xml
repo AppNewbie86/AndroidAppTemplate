@@ -11,26 +11,39 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/paw_312322"
-        android:backgroundTint="#B19F9F"
         tools:context=".MenuFragment">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/paw_312322"
+            android:background="@drawable/androidskill"
             android:backgroundTint="#E8DEDE">
+
+            <ImageView
+                android:id="@+id/imageView13"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/adroidskill2" />
 
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="70dp"
+                android:layout_marginEnd="64dp"
                 android:text="What can we do"
-                android:textColor="#0E0D0D"
-                android:textSize="34sp"
+                android:textColor="#F6F8F7"
+                android:textSize="40sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/divider"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.941" />
 
             <View
                 android:id="@+id/divider"
@@ -46,74 +59,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/visitdog_image"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="55dp"
-                android:clickable="true"
-                app:layout_constraintBottom_toTopOf="@+id/chatbot_image"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/divider"
-                app:srcCompat="@drawable/frame_33620" />
-
-            <ImageView
-                android:id="@+id/chatbot_image"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:clickable="true"
-                app:layout_constraintBottom_toTopOf="@+id/boarding_image"
-                app:layout_constraintEnd_toEndOf="@+id/visitdog_image"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="@+id/visitdog_image"
-                app:layout_constraintTop_toBottomOf="@+id/visitdog_image"
-                app:srcCompat="@drawable/chatbot" />
-
-            <ImageView
-                android:id="@+id/boarding_image"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:clickable="true"
-                android:contentDescription="Here can you boarding"
-                app:layout_constraintBottom_toTopOf="@+id/daycare_image"
-                app:layout_constraintEnd_toEndOf="@+id/chatbot_image"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="@+id/chatbot_image"
-                app:layout_constraintTop_toBottomOf="@+id/chatbot_image"
-                app:srcCompat="@drawable/boarding" />
-
-            <ImageView
-                android:id="@+id/daycare_image"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:clickable="true"
-                app:layout_constraintBottom_toTopOf="@+id/dogtraining_image"
-                app:layout_constraintEnd_toEndOf="@+id/boarding_image"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="@+id/boarding_image"
-                app:layout_constraintTop_toBottomOf="@+id/boarding_image"
-                app:srcCompat="@drawable/daycare" />
-
-            <ImageView
-                android:id="@+id/dogtraining_image"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="55dp"
-                android:clickable="true"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/daycare_image"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="@+id/daycare_image"
-                app:layout_constraintTop_toBottomOf="@+id/daycare_image"
-                app:srcCompat="@drawable/videos" />
-
-            <ImageView
-                android:id="@+id/imageView4"
+                android:id="@+id/backButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -121,7 +67,125 @@
                 app:layout_constraintBottom_toBottomOf="@+id/divider"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+                app:layout_constraintVertical_bias="0.702"
+                app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+                app:tint="#00BFA5" />
+
+            <Button
+                android:id="@+id/visitBtn"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:backgroundTint="#75C1BF61"
+                android:elevation="20dp"
+                android:text="Visit"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+            <Button
+                android:id="@+id/chatBotBtn"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#75C1BF61"
+                android:elevation="20dp"
+                android:text="ChatBot"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/visitBtn" />
+
+            <Button
+                android:id="@+id/boardingBtn"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#75C1BF61"
+                android:elevation="20dp"
+                android:text="Boarding"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chatBotBtn" />
+
+            <Button
+                android:id="@+id/dayCareBtn"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#75C1BF61"
+                android:elevation="20dp"
+                android:text="DayCare"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/boardingBtn" />
+
+            <Button
+                android:id="@+id/dogTrainingBtn"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#75C1BF61"
+                android:elevation="20dp"
+                android:text="DogTraining"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dayCareBtn" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="130dp"
+                android:gravity="center"
+                android:text="Sie finden uns auch bei FaceBook und Instagram, klicken Sie dafür nur auf die darunter stehenden Symbole"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/dogTrainingBtn"
+                app:layout_constraintStart_toStartOf="@+id/dogTrainingBtn"
+                app:layout_constraintTop_toBottomOf="@+id/dogTrainingBtn" />
+
+            <ImageView
+                android:id="@+id/facebook_icon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:clickable="true"
+                android:elevation="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView13"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9"
+                app:srcCompat="@drawable/style_original__round_true" />
+
+            <ImageView
+                android:id="@+id/instagram_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="135dp"
+                android:clickable="true"
+                android:elevation="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView13"
+                app:layout_constraintStart_toEndOf="@+id/facebook_icon"
+                app:layout_constraintTop_toBottomOf="@+id/textView9"
+                app:srcCompat="@drawable/style_original__squared_true" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </FrameLayout>
 </layout>

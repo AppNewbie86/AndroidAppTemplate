@@ -7,9 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import de.syntaxinstitut.dogcrounding.MainViewModel
-import de.syntaxinstitut.dogcrounding.R
 import de.syntaxinstitut.dogcrounding.databinding.FragmentDayCareBinding
-import de.syntaxinstitut.dogcrounding.databinding.FragmentVideoBinding
 
 
 class DayCareFragment : Fragment() {

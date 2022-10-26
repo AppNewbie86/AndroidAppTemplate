@@ -10,35 +10,32 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#8A8585"
         tools:context=".ui.visit.VisitFragment">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:backgroundTint="#DCD1D1">
+            android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/imageView9"
+                android:id="@+id/imageView4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/androidskill" />
+
+            <ImageView
+                android:id="@+id/backArrow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="32dp"
-                android:backgroundTint="#121111"
+                android:backgroundTint="#304FFE"
                 android:src="@drawable/ic_baseline_arrow_back_24"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <View
-                android:id="@+id/divider2"
-                android:layout_width="409dp"
-                android:layout_height="1dp"
-                android:layout_marginStart="1dp"
-                android:layout_marginTop="100dp"
-                android:layout_marginEnd="1dp"
-                android:background="?android:attr/listDivider"
-                android:backgroundTint="#ED0404"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -46,29 +43,15 @@
                 android:id="@+id/textView7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="90dp"
-                android:textColor="#272222"
+                android:layout_marginStart="88dp"
+                android:layout_marginTop="36dp"
+                android:textColor="#E35555"
                 android:textSize="14sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/divider2"
-                app:layout_constraintStart_toEndOf="@+id/imageView9"
+                app:layout_constraintStart_toEndOf="@+id/backArrow"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.395"
                 tools:text="Visit my Dogfriend" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="409dp"
-                android:layout_height="228dp"
-                android:layout_marginStart="1dp"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                android:orientation="horizontal"
-                app:spanCount="3"
-                tools:listitem="@layout/detail_item"
-                android:layout_marginTop="1dp"
-                android:layout_marginEnd="1dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/divider2" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </FrameLayout>
 </layout>

@@ -1,6 +1,19 @@
 <resources>
     <string name="app_name">DogCrounding</string>
 
+    <string name="name1">leo</string>
+    <string name="name2">emma</string>
+    <string name="name3">trixi</string>
+    <string name="name4">johnny</string>
+    <string name="name5">keanu</string>
+    <string name="name6">lea</string>
+    <string name="name7">luna</string>
+    <string name="name8">reese</string>
+    <string name="name9">splinter</string>
+    <string name="name10">scott</string>
+    <string name="name11">tom</string>
+    <string name="name12">will</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

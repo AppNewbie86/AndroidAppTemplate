@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import de.syntaxinstitut.dogcrounding.MainViewModel
 import de.syntaxinstitut.dogcrounding.databinding.FragmentDogFriendBinding
 
@@ -25,6 +26,7 @@ class DogFriendFragment : Fragment() {
     /** Bindet das XML-View mit der Klasse um auf die Elemente zugreifen zu können */
     private lateinit var binding: FragmentDogFriendBinding
     private lateinit var button3: Button
+    private lateinit var floatButton: FloatingActionButton
 
     /** Das ViewModel zu diesem Fragment */
     private val viewModel: MainViewModel by activityViewModels()
@@ -59,6 +61,16 @@ class DogFriendFragment : Fragment() {
             startActivity(Intent(Intent.ACTION_VIEW, uri))
 
         }
+
+
+        binding.chatBotButton.setOnClickListener {
+            findNavController().navigate(
+                DogFriendFragmentDirections.actionDogFriendFragmentToChatBotFragment()
+            )
+
+        }
+
+
         /* -------------------- Bei gedrücktem Listener soll InfoText sichtbar werden -------------------- */
 
         binding.infoBtn.setOnClickListener {
@@ -103,7 +115,7 @@ class DogFriendFragment : Fragment() {
                     DogFriendFragmentDirections.actionDogFriendFragmentToMenuFragment()
                 )
 
-                viewModel.resetAllValues()
+                viewModel.resetAllValues3()
             }
         }
 

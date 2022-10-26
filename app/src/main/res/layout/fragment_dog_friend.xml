@@ -10,7 +10,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/cocker_spaniel_2785074"
+        android:background="@drawable/johnny"
         tools:context=".DogFriendFragment">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -47,7 +47,7 @@
                 android:layout_height="136dp"
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="12dp"
-                android:fontFamily="@font/aclonica"
+                android:fontFamily="@font/cherry_cream_soda"
                 android:text="Loving, experienced pet sitter"
                 android:textColor="#0C0C0C"
                 android:textSize="34sp"
@@ -71,6 +71,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:background="#FFAB00"
                 android:fontFamily="@font/aclonica"
                 android:text="Ayden Garrett"
                 android:textColor="#090808"
@@ -112,7 +113,7 @@
                 android:backgroundTint="#9400B8D4"
                 android:elevation="5dp"
                 android:text="Info"
-                android:textColor="#0C0B0B"
+                android:textColor="#FF6D00"
                 android:textColorHint="#0B0A0A"
                 app:cornerRadius="5dp"
                 app:layout_constraintBottom_toTopOf="@+id/menuBtn"
@@ -154,7 +155,7 @@
                 android:layout_width="370dp"
                 android:layout_height="60dp"
                 android:layout_marginBottom="8dp"
-                android:backgroundTint="#915303"
+                android:backgroundTint="#FFAB00"
                 android:text="What can we do ?"
                 app:cornerRadius="30dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -164,7 +165,7 @@
             <ImageView
                 android:id="@+id/imageView5"
                 android:layout_width="188dp"
-                android:layout_height="119dp"
+                android:layout_height="129dp"
                 android:layout_marginStart="50dp"
                 android:alpha="0"
                 android:src="@drawable/info_bild"
@@ -175,7 +176,7 @@
             <ImageView
                 android:id="@+id/imageView6"
                 android:layout_width="397dp"
-                android:layout_height="136dp"
+                android:layout_height="156dp"
                 android:layout_marginTop="4dp"
                 android:alpha="0"
                 android:src="@drawable/feedback_text"
@@ -187,7 +188,7 @@
             <ImageView
                 android:id="@+id/imageView7"
                 android:layout_width="210dp"
-                android:layout_height="115dp"
+                android:layout_height="125dp"
                 android:layout_marginTop="16dp"
                 android:alpha="0"
                 android:src="@drawable/services"
@@ -206,6 +207,19 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="@string/location" />
+
+            <ImageView
+                android:id="@+id/chatBotButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="312dp"
+                android:layout_marginEnd="12dp"
+                android:adjustViewBounds="true"
+                android:clickable="true"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/bot_icon_2883144" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

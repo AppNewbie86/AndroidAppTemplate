@@ -32,6 +32,9 @@
         <action
             android:id="@+id/action_dogFriendFragment_to_menuFragment"
             app:destination="@id/menuFragment" />
+        <action
+            android:id="@+id/action_dogFriendFragment_to_chatBotFragment"
+            app:destination="@id/chatBotFragment" />
     </fragment>
     <fragment
         android:id="@+id/menuFragment"
@@ -47,17 +50,13 @@
             android:id="@+id/action_menuFragment_to_dayCareFragment"
             app:destination="@id/dayCareFragment" />
         <action
-            android:id="@+id/action_menuFragment_to_videoFragment"
-            app:destination="@id/videoFragment" />
-        <action
             android:id="@+id/action_menuFragment_to_boardingFragment"
             app:destination="@id/boardingFragment" />
     </fragment>
     <fragment
         android:id="@+id/chatBotFragment"
-        android:name="de.syntaxinstitut.dogcrounding.ui.chatbot.ChatBotFragment"
-        android:label="fragment_chat_bot"
-        tools:layout="@layout/fragment_chat_bot" />
+        android:name="ChatBotFragment"
+        android:label="fragment_chat_bot" />
     <fragment
         android:id="@+id/visitFragment"
         android:name="de.syntaxinstitut.dogcrounding.ui.visit.VisitFragment"
@@ -68,11 +67,6 @@
         android:name="de.syntaxinstitut.dogcrounding.ui.daycare.DayCareFragment"
         android:label="fragment_day_care"
         tools:layout="@layout/fragment_day_care" />
-    <fragment
-        android:id="@+id/videoFragment"
-        android:name="de.syntaxinstitut.dogcrounding.ui.vidz.VideoFragment"
-        android:label="fragment_video"
-        tools:layout="@layout/fragment_video" />
     <fragment
         android:id="@+id/boardingFragment"
         android:name="de.syntaxinstitut.dogcrounding.ui.boarding.BoardingFragment"
