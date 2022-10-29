@@ -253,6 +253,7 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
                 android:background="#F4F0F0"
+                android:clickable="true"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:srcCompat="@drawable/ic_baseline_camera_24" />
@@ -263,6 +264,7 @@
                 android:layout_height="114dp"
                 android:layout_marginTop="16dp"
                 android:adjustViewBounds="true"
+                android:clickable="true"
                 android:scaleType="centerCrop"
                 app:layout_constraintEnd_toStartOf="@+id/imageView16"
                 app:layout_constraintHorizontal_bias="0.012"
@@ -277,6 +279,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginBottom="20dp"
                 android:background="#EDE9E9"
+                android:clickable="true"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView17"
                 app:layout_constraintStart_toStartOf="@+id/imageView17"
                 app:srcCompat="@drawable/ic_baseline_camera_24" />
@@ -286,6 +289,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#FFFEFE"
+                android:clickable="true"
                 app:layout_constraintBottom_toTopOf="@+id/imageView16"
                 app:layout_constraintEnd_toEndOf="@+id/chatBotButton"
                 app:layout_constraintStart_toStartOf="@+id/chatBotButton"
