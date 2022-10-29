@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="64dp"
                 android:text="What can we do"
-                android:textColor="#F6F8F7"
+                android:textColor="#E6C777"
                 android:textSize="40sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/divider"
@@ -60,16 +60,16 @@
 
             <ImageView
                 android:id="@+id/backButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
                 android:foregroundGravity="center_vertical"
                 app:layout_constraintBottom_toBottomOf="@+id/divider"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.702"
                 app:srcCompat="@drawable/ic_baseline_arrow_back_24"
-                app:tint="#00BFA5" />
+                app:tint="#FFAB00" />
 
             <Button
                 android:id="@+id/visitBtn"
@@ -80,11 +80,14 @@
                 android:elevation="20dp"
                 android:text="Visit"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#304FFE"
                 android:textStyle="bold"
                 app:cornerRadius="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/divider" />
+                app:layout_constraintTop_toBottomOf="@+id/divider"
+                app:strokeColor="#702121"
+                app:strokeWidth="2dp" />
 
             <Button
                 android:id="@+id/chatBotBtn"
@@ -95,12 +98,15 @@
                 android:elevation="20dp"
                 android:text="ChatBot"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#304FFE"
                 android:textStyle="bold"
                 app:cornerRadius="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.496"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/visitBtn" />
+                app:layout_constraintTop_toBottomOf="@+id/visitBtn"
+                app:strokeColor="#702121"
+                app:strokeWidth="2dp" />
 
             <Button
                 android:id="@+id/boardingBtn"
@@ -111,12 +117,15 @@
                 android:elevation="20dp"
                 android:text="Boarding"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#304FFE"
                 android:textStyle="bold"
                 app:cornerRadius="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.496"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/chatBotBtn" />
+                app:layout_constraintTop_toBottomOf="@+id/chatBotBtn"
+                app:strokeColor="#702121"
+                app:strokeWidth="2dp" />
 
             <Button
                 android:id="@+id/dayCareBtn"
@@ -127,12 +136,15 @@
                 android:elevation="20dp"
                 android:text="DayCare"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#304FFE"
                 android:textStyle="bold"
                 app:cornerRadius="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.496"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/boardingBtn" />
+                app:layout_constraintTop_toBottomOf="@+id/boardingBtn"
+                app:strokeColor="#702121"
+                app:strokeWidth="2dp" />
 
             <Button
                 android:id="@+id/dogTrainingBtn"
@@ -143,22 +155,27 @@
                 android:elevation="20dp"
                 android:text="DogTraining"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#304FFE"
                 android:textStyle="bold"
                 app:cornerRadius="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.496"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/dayCareBtn" />
+                app:layout_constraintTop_toBottomOf="@+id/dayCareBtn"
+                app:strokeColor="#702121"
+                app:strokeWidth="2dp" />
 
             <TextView
                 android:id="@+id/textView9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="130dp"
+                android:layout_width="396dp"
+                android:layout_height="92dp"
+                android:layout_marginTop="24dp"
                 android:gravity="center"
                 android:text="Sie finden uns auch bei FaceBook und Instagram, klicken Sie dafür nur auf die darunter stehenden Symbole"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/dogTrainingBtn"
+                app:layout_constraintHorizontal_bias="0.493"
                 app:layout_constraintStart_toStartOf="@+id/dogTrainingBtn"
                 app:layout_constraintTop_toBottomOf="@+id/dogTrainingBtn" />
 
@@ -185,6 +202,19 @@
                 app:layout_constraintStart_toEndOf="@+id/facebook_icon"
                 app:layout_constraintTop_toBottomOf="@+id/textView9"
                 app:srcCompat="@drawable/style_original__squared_true" />
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="409dp"
+                android:layout_height="3dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="1dp"
+                android:background="?android:attr/listDivider"
+                android:backgroundTint="#090505"
+                app:layout_constraintBottom_toTopOf="@+id/instagram_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </FrameLayout>

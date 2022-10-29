@@ -70,6 +70,6 @@
     <fragment
         android:id="@+id/boardingFragment"
         android:name="de.syntaxinstitut.dogcrounding.ui.boarding.BoardingFragment"
-        android:label="BoardingFragment" />
+        android:label="Boarding_Fragment" />
 
 </navigation>

@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#FBFBFB"
+        android:background="#E6E3E3"
         android:backgroundTint="#F8F6F6">
 
         <ImageView
@@ -39,7 +39,8 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:elevation="20dp">
 
                 <TextView
                     android:id="@+id/infotext_login"

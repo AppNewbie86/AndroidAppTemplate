@@ -1,7 +1,9 @@
 package de.syntaxinstitut.dogcrounding
 
 import android.app.ProgressDialog
+import android.content.Context
 import android.content.Intent
+import android.media.MediaPlayer
 import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
@@ -34,6 +36,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController
 
 
+
+
+
     /* -------------------- Lifecycle -------------------- */
 
     /**
@@ -47,6 +52,7 @@ class MainActivity : AppCompatActivity() {
 
 
         supportActionBar?.hide()
+
 
 
 }}

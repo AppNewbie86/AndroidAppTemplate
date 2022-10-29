@@ -9,8 +9,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/chatmessagelayout"
-        android:layout_width="409dp"
-        android:layout_height="200dp"
+        android:layout_width="209dp"
+        android:layout_height="100dp"
         android:layout_marginTop="120dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,14 +20,14 @@
             android:id="@+id/cardlayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#D6D1D1">
+            android:background="#304FFE">
 
             <TextView
                 android:id="@+id/tv_bot_message"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="76dp"
-                android:layout_marginTop="52dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
                 android:textColor="#121111"
                 android:textSize="20sp"
                 android:textStyle="bold"

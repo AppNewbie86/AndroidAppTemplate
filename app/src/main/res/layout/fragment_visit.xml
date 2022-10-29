@@ -34,8 +34,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="32dp"
-                android:backgroundTint="#304FFE"
+                android:background="#D50000"
+                android:backgroundTint="#C51162"
                 android:src="@drawable/ic_baseline_arrow_back_24"
+                app:layout_constraintBottom_toBottomOf="@+id/textView7"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -43,14 +45,45 @@
                 android:id="@+id/textView7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="88dp"
-                android:layout_marginTop="36dp"
+                android:layout_marginStart="52dp"
+                android:layout_marginTop="32dp"
                 android:textColor="#E35555"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/backArrow"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="Visit my Dogfriend" />
+                tools:text="Was gibt es alles zu Beachten" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="76dp"
+                android:text="TierschutzVerein einfach Tierisch"
+                android:textColor="#00BFA5"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="@+id/backArrow"
+                app:layout_constraintTop_toBottomOf="@+id/backArrow" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="68dp"
+                android:layout_marginTop="36dp"
+                android:text="- Musterstrasse 55"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="- 99999 Musterhausen"
+                app:layout_constraintStart_toStartOf="@+id/textView16"
+                app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </FrameLayout>

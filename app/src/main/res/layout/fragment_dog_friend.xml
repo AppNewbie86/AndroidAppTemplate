@@ -10,107 +10,88 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/johnny"
+        android:background="@drawable/androidskill"
         tools:context=".DogFriendFragment">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout6"
+                android:layout_width="297dp"
+                android:layout_height="42dp"
+                android:layout_marginBottom="12dp"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusTopStart="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/imageView"
+                app:layout_constraintEnd_toStartOf="@+id/imageView15"
+                app:layout_constraintHorizontal_bias="0.47"
+                app:layout_constraintStart_toEndOf="@+id/imageView2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputEditText"
+                    android:layout_width="299dp"
+                    android:layout_height="36dp"
+                    android:hint="Search"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/form"
+                android:layout_width="412dp"
+                android:layout_height="295dp"
+                android:layout_marginTop="64dp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/dogandsitter" />
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:fontFamily="@font/aclonica"
-                android:text="choose from our trusted Dogfriend"
-                android:textColor="#D0732B"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@+id/imageView"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="@+id/imageView"
-                app:layout_constraintTop_toTopOf="@+id/imageView" />
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="262dp"
-                android:layout_height="136dp"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="12dp"
-                android:fontFamily="@font/cherry_cream_soda"
-                android:text="Loving, experienced pet sitter"
-                android:textColor="#0C0C0C"
-                android:textSize="34sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@+id/textView"
-                app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="48dp"
-                android:src="@drawable/ellipse"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginStart="112dp"
+                android:layout_marginTop="20dp"
                 android:background="#FFAB00"
                 android:fontFamily="@font/aclonica"
-                android:text="Ayden Garrett"
+                android:text="@string/name1"
                 android:textColor="#090808"
                 android:textSize="34sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@+id/imageView2"
-                app:layout_constraintStart_toStartOf="@+id/imageView2"
-                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView" />
 
             <ImageView
                 android:id="@+id/imageView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
                 android:src="@drawable/frame_33526"
-                app:layout_constraintEnd_toEndOf="@+id/textView3"
-                app:layout_constraintStart_toStartOf="@+id/textView3"
-                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+                app:layout_constraintStart_toStartOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="12dp"
                 android:text="Munich, 2 Miles, Away"
                 android:textColor="#FF9800"
-                app:layout_constraintEnd_toEndOf="@+id/textView3"
                 app:layout_constraintStart_toStartOf="@+id/textView3"
                 app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
 
             <Button
                 android:id="@+id/info_Btn"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginBottom="140dp"
-                android:backgroundTint="#9400B8D4"
+                android:layout_marginStart="24dp"
+                android:layout_marginBottom="256dp"
+                android:backgroundTint="#1C477A"
                 android:elevation="5dp"
                 android:text="Info"
                 android:textColor="#FF6D00"
@@ -118,6 +99,7 @@
                 app:cornerRadius="5dp"
                 app:layout_constraintBottom_toTopOf="@+id/menuBtn"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
                 app:strokeColor="#FF6D00" />
 
             <Button
@@ -125,7 +107,7 @@
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#9400B8D4"
+                android:backgroundTint="#1C477A"
                 android:elevation="5dp"
                 android:text="Feedback"
                 android:textColor="#AEADAD"
@@ -140,7 +122,7 @@
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#9400B8D4"
+                android:backgroundTint="#1C477A"
                 android:elevation="5dp"
                 android:text="Services"
                 android:textColor="#AEADAD"
@@ -152,20 +134,24 @@
 
             <Button
                 android:id="@+id/menuBtn"
-                android:layout_width="370dp"
+                android:layout_width="270dp"
                 android:layout_height="60dp"
-                android:layout_marginBottom="8dp"
-                android:backgroundTint="#FFAB00"
-                android:text="What can we do ?"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#C51162"
+                android:elevation="25dp"
+                android:shadowColor="#8A8787"
+                android:text="ToNavigator"
+                android:textColor="#00B8D4"
                 app:cornerRadius="30dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <ImageView
                 android:id="@+id/imageView5"
-                android:layout_width="188dp"
-                android:layout_height="129dp"
+                android:layout_width="323dp"
+                android:layout_height="185dp"
                 android:layout_marginStart="50dp"
                 android:alpha="0"
                 android:src="@drawable/info_bild"
@@ -175,51 +161,136 @@
 
             <ImageView
                 android:id="@+id/imageView6"
-                android:layout_width="397dp"
-                android:layout_height="156dp"
+                android:layout_width="396dp"
+                android:layout_height="238dp"
                 android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
                 android:alpha="0"
                 android:src="@drawable/feedback_text"
                 android:visibility="visible"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/info_Btn" />
 
             <ImageView
                 android:id="@+id/imageView7"
-                android:layout_width="210dp"
-                android:layout_height="125dp"
+                android:layout_width="279dp"
+                android:layout_height="192dp"
                 android:layout_marginTop="16dp"
                 android:alpha="0"
+                android:background="#D3CACA"
                 android:src="@drawable/services"
                 android:visibility="visible"
                 app:layout_constraintEnd_toEndOf="@+id/services_Btn"
                 app:layout_constraintTop_toBottomOf="@+id/services_Btn" />
 
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="308dp"
-                android:layout_marginEnd="308dp"
-                android:backgroundTint="#1BC51162"
-                android:textColor="#F6F3F3"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="@string/location" />
-
             <ImageView
                 android:id="@+id/chatBotButton"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:layout_marginTop="312dp"
-                android:layout_marginEnd="12dp"
+                android:layout_marginTop="148dp"
+                android:layout_marginEnd="16dp"
                 android:adjustViewBounds="true"
                 android:clickable="true"
                 android:scaleType="fitCenter"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/bot_icon_2883144" />
+
+            <ImageButton
+                android:id="@+id/button3"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:elevation="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView"
+                app:srcCompat="@drawable/ellipse_16" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="#EDECEC"
+                app:layout_constraintBottom_toBottomOf="@+id/textInputEditText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+            <ImageView
+                android:id="@+id/imageView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="#F8F5F5"
+                app:layout_constraintBottom_toBottomOf="@+id/textInputEditText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_baseline_search_24" />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="409dp"
+                android:layout_height="3dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="1dp"
+                android:background="?android:attr/listDivider"
+                android:backgroundTint="#FBFAFA"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+            <ImageView
+                android:id="@+id/imageView16"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="#F4F0F0"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/ic_baseline_camera_24" />
+
+            <ImageView
+                android:id="@+id/imageView17"
+                android:layout_width="109dp"
+                android:layout_height="114dp"
+                android:layout_marginTop="16dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toStartOf="@+id/imageView16"
+                app:layout_constraintHorizontal_bias="0.012"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView"
+                app:srcCompat="@drawable/ellipse_12" />
+
+            <ImageView
+                android:id="@+id/imageView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="#EDE9E9"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView17"
+                app:layout_constraintStart_toStartOf="@+id/imageView17"
+                app:srcCompat="@drawable/ic_baseline_camera_24" />
+
+            <ImageView
+                android:id="@+id/imageView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#FFFEFE"
+                app:layout_constraintBottom_toTopOf="@+id/imageView16"
+                app:layout_constraintEnd_toEndOf="@+id/chatBotButton"
+                app:layout_constraintStart_toStartOf="@+id/chatBotButton"
+                app:layout_constraintTop_toBottomOf="@+id/chatBotButton"
+                app:srcCompat="@drawable/ic_baseline_doorbell_24" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
