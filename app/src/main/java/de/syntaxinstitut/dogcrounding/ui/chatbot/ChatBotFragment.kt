@@ -2,51 +2,66 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.viewModelScope
 import de.syntaxinstitut.dogcrounding.MainViewModel
+import de.syntaxinstitut.dogcrounding.adapter.MessageAdapter
 import de.syntaxinstitut.dogcrounding.databinding.FragmentChatBotBinding
 
-/**
- * Fragment 1
- */
 class ChatBotFragment : Fragment() {
 
-    /* -------------------- Klassen Variablen -------------------- */
+    /***
+     * BindingMethode wird mit HomeFragment verbunden
+     */
 
-    /** Bindet das XML-View mit der Klasse um auf die Elemente zugreifen zu können */
     private lateinit var binding: FragmentChatBotBinding
-    private lateinit var informationText: TextView
-    private lateinit var layout: CardView
 
-    /** Das ViewModel zu diesem Fragment */
+    /***
+     * ViewModel teilt sich Activity mit ViewModels
+     */
+
     private val viewModel: MainViewModel by activityViewModels()
 
-    /* -------------------- Lifecycle -------------------- */
 
-    /**
-     * Lifecycle Methode wenn das View erstellt wird
+    /***
+     * Layout wird inflatet also aufgeblasen und zum darstellen vorbereitet
      */
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ): View {
+    ): View? {
         binding = FragmentChatBotBinding.inflate(inflater)
-
         return binding.root
     }
 
-    /**
-     * Lifecycle Methode nachdem das View erstellt wurde
+    /***
+     * wenn View erstellt wurde wird der contactadapter festgesetzt und als Konstante gesetzt
+     * um nicht mehr manipulierbar zusein desweiteren wurde im nächsten Schritt der Recyclerview mit contactadapter verknüpft
      */
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
 
-        binding.recyclerView.adapter
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+            binding.sendBtn.setOnClickListener {
+                val input = binding.chatSendMessage.text.toString()
+                viewModel.sendMessage(input)
+                binding.chatSendMessage.setText("")
+            }
+
+
+
+        val messageAdapter = context?.let { MessageAdapter(it) }
+        binding.recyclerView.adapter = messageAdapter
+
+
+
+        viewModel.viewModelScope.coroutineContext.toString()
 
 
     }
+
 }

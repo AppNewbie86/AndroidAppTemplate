@@ -17,6 +17,13 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="location" />
+    <string name="location1" />
+    <string name="skip">skip</string>
+    <string name="chatBotButton">chatBotButton</string>
+    <string name="searchbar" />
+    <string name="searchbar_text">searchbar_text</string>
+    <string name="bell_inactiv">bell_inactiv</string>
+    <string name="search">Search</string>
+    <string name="send">send</string>
 </resources>
 

@@ -16,13 +16,15 @@ import de.syntaxinstitut.dogcrounding.databinding.FragmentMenuBinding
 
 
 /**
- * Fragment 2
+ * MenüFragment
  */
 class MenuFragment : Fragment() {
 
     /* -------------------- Klassen Variablen -------------------- */
 
-    /** Bindet das XML-View mit der Klasse um auf die Elemente zugreifen zu können */
+    /** Bindet das XML-View mit der Klasse um
+     * auf die Elemente zugreifen zu können
+     * */
     private lateinit var binding: FragmentMenuBinding
 
 
@@ -31,6 +33,7 @@ class MenuFragment : Fragment() {
     private lateinit var boardingButton: Button
     private lateinit var dayCareButton: Button
     private lateinit var dogTrainingButton: Button
+    private lateinit var backButton: Button
 
 
     private lateinit var daycareImage: ImageView
@@ -40,14 +43,7 @@ class MenuFragment : Fragment() {
     /** Das ViewModel zu diesem Fragment */
     private val viewModel: MainViewModel by activityViewModels()
 
-    /* -------------------- Lifecycle -------------------- */
-    /**
-     * Lifecycle Methode wenn das View erstellt wird
-     *
-     * @param inflater                Layout Inflater
-     * @param container               View Gruppe
-     * @param savedInstanceState      Eventuelle saveStates
-     */
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -58,26 +54,26 @@ class MenuFragment : Fragment() {
         return binding.root
     }
 
-    /**
-     * Lifecycle Methode nachdem das View erstellt wurde
-     */
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        /* -------------------- UI-Interaktionen -------------------- */
+        /* -------------------- Interaktion auf letztes Fragment -------------------- */
 
         binding.backButton.setOnClickListener()
         {
-            viewModel.navigateToFragmentMenuFragment.observe(viewLifecycleOwner) {
-                if (it) {
-                    findNavController().navigate(
-                        MenuFragmentDirections.actionMenuFragmentToDayCareFragment()
-                    )
 
-                    viewModel.resetAllValues3()
-                }
-            }
+            findNavController().navigate(
+                MenuFragmentDirections.actionMenuFragmentToDogFriendFragment()
+            )
         }
+
+
+
+        /* -------------------- UI-Interaktionen -------------------- */
+
+
+
+        //navigation auf VisitFragment
 
 
         binding.visitBtn.setOnClickListener()
@@ -88,6 +84,9 @@ class MenuFragment : Fragment() {
 
         }
 
+        //navigation auf ChatBotFragment
+
+
         binding.chatBotBtn.setOnClickListener()
         {
             findNavController().navigate(
@@ -95,6 +94,9 @@ class MenuFragment : Fragment() {
             )
 
         }
+
+        //navigation auf BoardingFragment
+
 
         binding.boardingBtn.setOnClickListener()
         {
@@ -104,6 +106,8 @@ class MenuFragment : Fragment() {
 
         }
 
+        //navigation auf DayCareFragment
+
         binding.dayCareBtn.setOnClickListener()
         {
             findNavController().navigate(
@@ -112,12 +116,26 @@ class MenuFragment : Fragment() {
 
         }
 
+
+        binding.AppSettingsBtn.setOnClickListener()
+        {
+            findNavController().navigate(
+                MenuFragmentDirections.actionMenuFragmentToAppSettingsFragment()
+            )
+
+        }
+
+        //Indent auf FaceBook
+
         binding.facebookIcon.setOnClickListener {
             val url = "https://www.facebook.com/"
             val i = Intent(Intent.ACTION_VIEW)
             i.data = Uri.parse(url)
             startActivity(i)
         }
+
+        //Indent auf Instagram
+
 
         binding.instagramIcon.setOnClickListener {
             val url = "https://www.instagram.com/"
@@ -127,9 +145,24 @@ class MenuFragment : Fragment() {
         }
 
 
+        //Indent auf Telegram
+
+
+        binding.telegramBtn.setOnClickListener {
+            val url = "https://www.telegram.org/"
+            val i = Intent(Intent.ACTION_VIEW)
+            i.data = Uri.parse(url)
+            startActivity(i)
+        }
+
+
+
     }
 
 }
+
+
+
 
 
 

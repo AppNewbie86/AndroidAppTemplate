@@ -43,8 +43,8 @@ class MessageAdapter(private val context: Context): RecyclerView.Adapter<Message
     override fun onBindViewHolder(holder: MessageViewHolder, position: Int) {
         val currentMessage = messagesList[position]
 
-        val myMsg = holder.itemView.findViewById<TextView>(R.id.tv_bot_message)
-        val botMsg = holder.itemView.findViewById<TextView>(R.id.tv_bot_message)
+        val myMsg = holder.itemView.findViewById<TextView>(R.id.message)
+        val botMsg = holder.itemView.findViewById<TextView>(R.id.message)
 
         when (currentMessage.id) {
             SEND_ID -> {

@@ -49,6 +49,7 @@
                 app:layout_constraintStart_toStartOf="parent">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/chat_sendMessage"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="write a message"
@@ -62,6 +63,7 @@
                 android:layout_marginStart="24dp"
                 android:adjustViewBounds="false"
                 android:backgroundTint="#83FFAB00"
+                android:contentDescription="@string/send"
                 android:elevation="20dp"
                 android:scaleType="center"
                 app:layout_constraintBottom_toBottomOf="@+id/textInputLayout"

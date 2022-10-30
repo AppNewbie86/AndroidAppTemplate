@@ -44,6 +44,24 @@ class MainViewModel : ViewModel() {
         }
     }
 
+
+    private val _chat = MutableLiveData<MutableList<String>>()
+    val chat: LiveData<MutableList<String>>
+        get() = _chat
+
+
+
+
+    fun sendMessage(text : String) {
+        _chat.value?.add(0,text)
+
+        /***
+         *  dient nur dazu den Observer zu benachrichtigen
+         *  hier nimmt der Observer die Ändferung wahr und zeigt sie an
+         */
+        _chat.value = chat.value
+    }
+
     /* -------------------- Klassen Variablen -------------------- */
 
     /** Signal um zu signalisieren, dass zum zweiten Fragment gewechselt werden soll */

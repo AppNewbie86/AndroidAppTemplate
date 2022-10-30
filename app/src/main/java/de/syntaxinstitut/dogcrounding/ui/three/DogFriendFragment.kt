@@ -7,13 +7,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import de.syntaxinstitut.dogcrounding.MainViewModel
+import de.syntaxinstitut.dogcrounding.R
 import de.syntaxinstitut.dogcrounding.databinding.FragmentDogFriendBinding
+import kotlin.properties.Delegates
 
 
 /**
@@ -27,6 +32,11 @@ class DogFriendFragment : Fragment() {
     private lateinit var binding: FragmentDogFriendBinding
     private lateinit var button3: Button
     private lateinit var floatButton: FloatingActionButton
+    private lateinit var imageView: ImageView
+    private lateinit var cardView: CardView
+    private lateinit var button : Button
+    private var textinputLocation by Delegates.notNull<Int>()
+
 
     /** Das ViewModel zu diesem Fragment */
     private val viewModel: MainViewModel by activityViewModels()
@@ -51,6 +61,12 @@ class DogFriendFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.searchbuttonDogfriend.setOnClickListener {
+            Uri.parse("geo:0,0?q=" + findViewById<TextView>(R.id.textinput_location).toString())
+            startActivity(Intent(Intent.ACTION_VIEW))
+
+        }
 
 
         /* -------------------- Implimzierter Intent für Google Maps -------------------- */
@@ -119,6 +135,10 @@ class DogFriendFragment : Fragment() {
             }
         }
 
+
+    }
+
+    private fun <T> findViewById(textinputLocation: Int) {
 
     }
 }

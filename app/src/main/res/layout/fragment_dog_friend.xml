@@ -10,7 +10,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/androidskill"
+        android:background="@drawable/androidhintergrund"
         tools:context=".DogFriendFragment">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -21,21 +21,20 @@
                 android:id="@+id/textInputLayout6"
                 android:layout_width="297dp"
                 android:layout_height="42dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginBottom="12dp"
                 app:boxCornerRadiusBottomEnd="8dp"
                 app:boxCornerRadiusBottomStart="8dp"
                 app:boxCornerRadiusTopEnd="8dp"
                 app:boxCornerRadiusTopStart="8dp"
                 app:layout_constraintBottom_toTopOf="@+id/imageView"
-                app:layout_constraintEnd_toStartOf="@+id/imageView15"
-                app:layout_constraintHorizontal_bias="0.47"
-                app:layout_constraintStart_toEndOf="@+id/imageView2">
+                app:layout_constraintStart_toStartOf="parent">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textInputEditText"
-                    android:layout_width="299dp"
-                    android:layout_height="36dp"
-                    android:hint="Search"
+                    android:id="@+id/textinput_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/search"
                     tools:ignore="TouchTargetSizeCheck" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -56,7 +55,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="112dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="16dp"
                 android:background="#FFAB00"
                 android:fontFamily="@font/aclonica"
                 android:text="@string/name1"
@@ -70,6 +69,7 @@
                 android:id="@+id/imageView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
                 android:src="@drawable/frame_33526"
                 app:layout_constraintStart_toStartOf="@+id/textView4"
                 app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -132,6 +132,33 @@
                 app:layout_constraintTop_toTopOf="@+id/feedback_Btn"
                 app:strokeColor="#FF6D00" />
 
+            <androidx.cardview.widget.CardView
+                android:id="@+id/searchcard"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:clickable="true"
+                android:contentDescription="@string/searchbar_text"
+                app:cardCornerRadius="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/searchbutton_dogfriend"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:background="#8A8787"
+                    android:clickable="false"
+                    android:elevation="20dp"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/ic_baseline_search_24"
+                    tools:ignore="NotSibling" />
+            </androidx.cardview.widget.CardView>
+
             <Button
                 android:id="@+id/menuBtn"
                 android:layout_width="270dp"
@@ -146,7 +173,9 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.496"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:strokeColor="#E4E3E3"
+                app:strokeWidth="2dp" />
 
             <ImageView
                 android:id="@+id/imageView5"
@@ -193,6 +222,8 @@
                 android:layout_marginEnd="16dp"
                 android:adjustViewBounds="true"
                 android:clickable="true"
+                android:contentDescription="@string/chatBotButton"
+                android:elevation="20dp"
                 android:scaleType="fitCenter"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -209,51 +240,29 @@
                 app:layout_constraintTop_toTopOf="@+id/imageView"
                 app:srcCompat="@drawable/ellipse_16" />
 
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:background="#EDECEC"
-                app:layout_constraintBottom_toBottomOf="@+id/textInputEditText"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
-
-            <ImageView
-                android:id="@+id/imageView15"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:background="#F8F5F5"
-                app:layout_constraintBottom_toBottomOf="@+id/textInputEditText"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_baseline_search_24" />
-
             <View
                 android:id="@+id/divider2"
                 android:layout_width="409dp"
                 android:layout_height="3dp"
                 android:layout_marginStart="1dp"
-                android:layout_marginTop="9dp"
                 android:layout_marginEnd="1dp"
+                android:layout_marginBottom="4dp"
                 android:background="?android:attr/listDivider"
                 android:backgroundTint="#FBFAFA"
+                app:layout_constraintBottom_toTopOf="@+id/imageView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+                tools:ignore="MissingConstraints" />
 
             <ImageView
-                android:id="@+id/imageView16"
+                android:id="@+id/camera_open"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
                 android:background="#F4F0F0"
                 android:clickable="true"
+                android:elevation="20dp"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:srcCompat="@drawable/ic_baseline_camera_24" />
@@ -266,23 +275,11 @@
                 android:adjustViewBounds="true"
                 android:clickable="true"
                 android:scaleType="centerCrop"
-                app:layout_constraintEnd_toStartOf="@+id/imageView16"
+                app:layout_constraintEnd_toStartOf="@+id/camera_open"
                 app:layout_constraintHorizontal_bias="0.012"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/imageView"
                 app:srcCompat="@drawable/ellipse_12" />
-
-            <ImageView
-                android:id="@+id/imageView18"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginBottom="20dp"
-                android:background="#EDE9E9"
-                android:clickable="true"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView17"
-                app:layout_constraintStart_toStartOf="@+id/imageView17"
-                app:srcCompat="@drawable/ic_baseline_camera_24" />
 
             <ImageView
                 android:id="@+id/imageView19"
@@ -290,10 +287,31 @@
                 android:layout_height="wrap_content"
                 android:background="#FFFEFE"
                 android:clickable="true"
-                app:layout_constraintBottom_toTopOf="@+id/imageView16"
+                android:contentDescription="@string/bell_inactiv"
+                android:elevation="20dp"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                app:layout_constraintBottom_toTopOf="@+id/camera_open"
                 app:layout_constraintEnd_toEndOf="@+id/chatBotButton"
+                app:layout_constraintHorizontal_bias="0.583"
                 app:layout_constraintStart_toStartOf="@+id/chatBotButton"
                 app:layout_constraintTop_toBottomOf="@+id/chatBotButton"
+                app:layout_constraintVertical_bias="0.493"
+                app:srcCompat="@drawable/ic_baseline_doorbell_24" />
+
+            <ImageView
+                android:id="@+id/bellactiv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#FFD600"
+                android:clickable="true"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/camera_open"
+                app:layout_constraintEnd_toEndOf="@+id/chatBotButton"
+                app:layout_constraintHorizontal_bias="0.541"
+                app:layout_constraintStart_toStartOf="@+id/chatBotButton"
+                app:layout_constraintTop_toBottomOf="@+id/chatBotButton"
+                app:layout_constraintVertical_bias="0.506"
                 app:srcCompat="@drawable/ic_baseline_doorbell_24" />
 
 

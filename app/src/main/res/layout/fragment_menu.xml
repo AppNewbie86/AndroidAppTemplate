@@ -63,6 +63,7 @@
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="8dp"
+                android:clickable="true"
                 android:foregroundGravity="center_vertical"
                 app:layout_constraintBottom_toBottomOf="@+id/divider"
                 app:layout_constraintStart_toStartOf="parent"
@@ -147,13 +148,13 @@
                 app:strokeWidth="2dp" />
 
             <Button
-                android:id="@+id/dogTrainingBtn"
+                android:id="@+id/AppSettingsBtn"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:backgroundTint="#75C1BF61"
                 android:elevation="20dp"
-                android:text="DogTraining"
+                android:text="Settings"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="#304FFE"
                 android:textStyle="bold"
@@ -171,13 +172,13 @@
                 android:layout_height="92dp"
                 android:layout_marginTop="24dp"
                 android:gravity="center"
-                android:text="Sie finden uns auch bei FaceBook und Instagram, klicken Sie dafür nur auf die darunter stehenden Symbole"
+                android:text="Sie finden uns auch bei FaceBook, Telegram und Instagram, klicken Sie dafür nur auf die darunter stehenden Symbole"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@+id/dogTrainingBtn"
+                app:layout_constraintEnd_toEndOf="@+id/AppSettingsBtn"
                 app:layout_constraintHorizontal_bias="0.493"
-                app:layout_constraintStart_toStartOf="@+id/dogTrainingBtn"
-                app:layout_constraintTop_toBottomOf="@+id/dogTrainingBtn" />
+                app:layout_constraintStart_toStartOf="@+id/AppSettingsBtn"
+                app:layout_constraintTop_toBottomOf="@+id/AppSettingsBtn" />
 
             <ImageView
                 android:id="@+id/facebook_icon"
@@ -215,6 +216,17 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+            <ImageView
+                android:id="@+id/telegramBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView13"
+                app:layout_constraintEnd_toStartOf="@+id/instagram_icon"
+                app:layout_constraintHorizontal_bias="0.506"
+                app:layout_constraintStart_toEndOf="@+id/facebook_icon"
+                app:layout_constraintTop_toBottomOf="@+id/textView9"
+                app:srcCompat="@drawable/telegram" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </FrameLayout>
