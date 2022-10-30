@@ -10,18 +10,25 @@
     <FrameLayout
 
 
-
-
-
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/androidhintergrund"
         tools:context=".AppSettingsFragment">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/adroidskill2">
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView15"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/settings" />
 
             <TextView
                 android:id="@+id/title_settings"
@@ -54,8 +61,12 @@
                 android:id="@+id/switch1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="#E45B5B"
                 android:minHeight="48dp"
                 android:text="Darkmode"
+                android:textColor="#5C0202"
+                android:textStyle="bold"
+                android:thumbTint="#8F2D2D"
                 app:layout_constraintBottom_toBottomOf="@+id/themetext"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.775"
@@ -86,16 +97,6 @@
                 app:layout_constraintStart_toStartOf="@+id/themetext"
                 app:layout_constraintTop_toBottomOf="@+id/divider4" />
 
-            <ToggleButton
-                android:id="@+id/toggleButton2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="112dp"
-                android:layout_marginTop="44dp"
-                android:text="ToggleButton"
-                app:layout_constraintStart_toEndOf="@+id/soundtext"
-                app:layout_constraintTop_toBottomOf="@+id/switch1" />
-
             <View
                 android:id="@+id/divider5"
                 android:layout_width="360dp"
@@ -105,6 +106,52 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/divider4" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="80dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="124dp"
+                android:text="Languages"
+                android:textColor="#304FFE"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/soundtext"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/soundtext"
+                app:layout_constraintTop_toBottomOf="@+id/soundtext" />
+
+            <Spinner
+                android:id="@+id/sprachspinner"
+                android:layout_width="243dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="76dp"
+                android:elevation="20dp"
+                android:entries="@array/sprachspinner_array"
+                android:spinnerMode="dropdown"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.479"
+                app:layout_constraintStart_toEndOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/divider5" />
+
+            <ToggleButton
+                android:id="@+id/toggleButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="ToggleButton"
+                app:layout_constraintBottom_toBottomOf="@+id/soundtext"
+                app:layout_constraintStart_toEndOf="@+id/soundtext"
+                app:layout_constraintTop_toTopOf="@+id/soundtext" />
+
+            <ToggleButton
+                android:id="@+id/toggleButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ToggleButton"
+                app:layout_constraintBottom_toBottomOf="@+id/toggleButton1"
+                app:layout_constraintStart_toEndOf="@+id/toggleButton1"
+                app:layout_constraintTop_toTopOf="@+id/toggleButton1" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </FrameLayout>
