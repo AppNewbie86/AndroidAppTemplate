@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "AndroidAppTemplate"
+rootProject.name = "DogCrounding"
 include ':app'

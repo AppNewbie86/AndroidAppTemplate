@@ -74,7 +74,7 @@ class DogFriendFragment : Fragment() {
 
 
         binding.button3.setOnClickListener {
-            var uri = Uri.parse("geo:0,0?q=" + AppCompatActivity.LOCATION_SERVICE.toString())
+            var uri = Uri.parse("geo:0,0?q=" + "Munich")
             startActivity(Intent(Intent.ACTION_VIEW, uri))
 
         }
