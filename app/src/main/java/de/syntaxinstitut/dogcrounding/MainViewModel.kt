@@ -15,6 +15,7 @@ enum class ApiStatus { LOADING, ERROR, DONE }
 
 class MainViewModel : ViewModel() {
 
+
     private val repository = AppRepository(DogApi)
 
     private val _loading = MutableLiveData<ApiStatus>()

@@ -228,6 +228,16 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView9"
                 app:srcCompat="@drawable/telegram" />
 
+            <Button
+                android:id="@+id/videoBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:text="Video"
+                app:layout_constraintBottom_toTopOf="@+id/visitBtn"
+                app:layout_constraintEnd_toEndOf="@+id/visitBtn"
+                app:layout_constraintStart_toStartOf="@+id/visitBtn" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </FrameLayout>
 </layout>

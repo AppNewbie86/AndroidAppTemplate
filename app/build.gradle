@@ -3,6 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'androidx.navigation.safeargs.kotlin'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -73,6 +74,10 @@ dependencies {
 
     // Moshi
     implementation "com.squareup.moshi:moshi-kotlin:$moshi_version"
+
+    // Firebase
+
+    implementation platform('com.google.firebase:firebase-bom:31.0.2')
 /*
     //GLIDE
     implementation 'com.android.volley:volley:1.2.1'

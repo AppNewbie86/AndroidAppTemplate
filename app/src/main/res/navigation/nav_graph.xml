@@ -19,7 +19,7 @@
         android:id="@+id/twoFragment"
         android:name="de.syntaxinstitut.dogcrounding.ui.two.TwoFragment"
         android:label="Detail"
-        tools:layout="@layout/fragment_two" >
+        tools:layout="@layout/fragment_two">
         <action
             android:id="@+id/action_twoFragment_to_dogFriendFragment"
             app:destination="@id/dogFriendFragment" />
@@ -28,12 +28,11 @@
         android:id="@+id/dogFriendFragment"
         android:name="de.syntaxinstitut.dogcrounding.ui.three.DogFriendFragment"
         android:label="fragment_dog_friend"
-        tools:layout="@layout/fragment_dog_friend" >
+        tools:layout="@layout/fragment_dog_friend">
         <action
             android:id="@+id/action_dogFriendFragment_to_menuFragment"
             app:destination="@id/menuFragment" />
-        <action
-            android:id="@+id/action_dogFriendFragment_to_introPageBotFragment"/>
+        <action android:id="@+id/action_dogFriendFragment_to_introPageBotFragment" />
         <action
             android:id="@+id/action_dogFriendFragment_to_chatBotFragment"
             app:destination="@id/chatBotFragment" />
@@ -41,7 +40,9 @@
     <fragment
         android:id="@+id/menuFragment"
         android:name="de.syntaxinstitut.dogcrounding.ui.four.MenuFragment"
-        android:label="MenuFragment" >
+        android:label="MenuFragment"
+        tools:layout="@layout/fragment_menu">
+
         <action
             android:id="@+id/action_menuFragment_to_visitFragment"
             app:destination="@id/visitFragment" />
@@ -60,11 +61,15 @@
         <action
             android:id="@+id/action_menuFragment_to_chatBotFragment"
             app:destination="@id/chatBotFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_videoFragment"
+            app:destination="@id/videoFragment" />
     </fragment>
     <fragment
         android:id="@+id/chatBotFragment"
         android:name="ChatBotFragment"
-        android:label="fragment_chat_bot" >
+        android:label="fragment_chat_bot"
+        tools:layout="@layout/fragment_chat_bot" >
         <action
             android:id="@+id/action_chatBotFragment_to_dogFriendFragment"
             app:destination="@id/dogFriendFragment" />
@@ -82,19 +87,25 @@
     <fragment
         android:id="@+id/boardingFragment"
         android:name="de.syntaxinstitut.dogcrounding.ui.boarding.BoardingFragment"
-        android:label="Boarding_Fragment" />
+        android:label="Boarding_Fragment"
+        tools:layout="@layout/fragment_boarding" />
     <fragment
         android:id="@+id/appSettingsFragment"
         android:name="de.syntaxinstitut.dogcrounding.ui.settings.AppSettingsFragment"
         android:label="fragment_app_settings"
-        tools:layout="@layout/fragment_app_settings" >
+        tools:layout="@layout/fragment_app_settings">
         <action
             android:id="@+id/action_appSettingsFragment_to_menuFragment"
             app:destination="@id/menuFragment" />
     </fragment>
 
-        <action
-            android:id="@+id/action_introPageBotFragment_to_chatBotFragment"
-            app:destination="@id/chatBotFragment" />
-    </navigation>
+    <action
+        android:id="@+id/action_introPageBotFragment_to_chatBotFragment"
+        app:destination="@id/chatBotFragment" />
+    <fragment
+        android:id="@+id/videoFragment"
+        android:name="de.syntaxinstitut.dogcrounding.ui.video.VideoFragment"
+        android:label="fragment_video"
+        tools:layout="@layout/fragment_video" />
+</navigation>
 

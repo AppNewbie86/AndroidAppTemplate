@@ -84,6 +84,22 @@ class MenuFragment : Fragment() {
 
         }
 
+
+        binding.videoBtn.setOnClickListener()
+        {
+            findNavController().navigate(
+                MenuFragmentDirections.actionMenuFragmentToVideoFragment()
+            )
+
+        }
+
+
+
+
+
+
+
+
         //navigation auf ChatBotFragment
 
 

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "7118803795",
+    "project_id": "dogcrounding",
+    "storage_bucket": "dogcrounding.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:7118803795:android:c4e5db0f859812da4b47a6",
+        "android_client_info": {
+          "package_name": "de.syntaxinstitut.dogcrounding"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "7118803795-lbhbvuccmq4gbjmqoms0upllulnfhljd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "de.syntaxinstitut.dogcrounding",
+            "certificate_hash": "be5c1f5646d40e772132dffbbde8df47a6351c9d"
+          }
+        },
+        {
+          "client_id": "7118803795-vm098aa2jja4e86vheu8egpg2msiiv22.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcHsQFHKSROhjltVD1-oQII_63u69P6nk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "7118803795-vm098aa2jja4e86vheu8egpg2msiiv22.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
