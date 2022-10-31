@@ -1,6 +1,7 @@
 package de.syntaxinstitut.dogcrounding.ui.three
 
 import android.content.Intent
+import android.media.MediaPlayer
 import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -34,7 +35,7 @@ class DogFriendFragment : Fragment() {
     private lateinit var floatButton: FloatingActionButton
     private lateinit var imageView: ImageView
     private lateinit var cardView: CardView
-    private lateinit var button : Button
+    private lateinit var button: Button
     private var textinputLocation by Delegates.notNull<Int>()
 
 
@@ -85,6 +86,8 @@ class DogFriendFragment : Fragment() {
             )
 
         }
+
+
 
 
         /* -------------------- Bei gedrücktem Listener soll InfoText sichtbar werden -------------------- */

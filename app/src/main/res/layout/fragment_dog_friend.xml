@@ -149,7 +149,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:adjustViewBounds="true"
-                    android:background="#8A8787"
+                    android:background="#F3BDBD"
                     android:clickable="false"
                     android:elevation="20dp"
                     android:minWidth="48dp"
@@ -164,11 +164,11 @@
                 android:layout_width="270dp"
                 android:layout_height="60dp"
                 android:layout_marginBottom="16dp"
-                android:backgroundTint="#C51162"
+                android:backgroundTint="#F50091EA"
                 android:elevation="25dp"
                 android:shadowColor="#8A8787"
-                android:text="ToNavigator"
-                android:textColor="#00B8D4"
+                android:text="Menu"
+                android:textColor="#C51162"
                 app:cornerRadius="30dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -313,6 +313,16 @@
                 app:layout_constraintTop_toBottomOf="@+id/chatBotButton"
                 app:layout_constraintVertical_bias="0.506"
                 app:srcCompat="@drawable/ic_baseline_doorbell_24" />
+
+            <ImageView
+                android:id="@+id/imageView16"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="76dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView17"
+                app:srcCompat="@drawable/ic_baseline_email_24" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

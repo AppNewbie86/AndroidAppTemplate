@@ -63,30 +63,6 @@ class BoardingFragment : Fragment() {
             }
         )
 
-        /* -------------------- UI-Interaktionen -------------------- */
-
-        //   Hier werden die Views fertig zugeordnet
-
-        materialToolbar = binding.materialToolbar
-        description = binding.dogdescription
-        button = binding.boardingBtn
-
-        binding.arrowbackimage.setOnClickListener {
-            viewModel.navigateToFragmentMenu()
-        }
-
-        /* -------------------- Observer -------------------- */
-
-        // Navigation zum zweiten Fragment
-        viewModel.navigateToFragmentMenuFragment.observe(viewLifecycleOwner) {
-            if (it) {
-                findNavController().navigateUp(
-                )
-
-                viewModel.resetAllValues3()
-            }
-        }
-
 
     }
 }

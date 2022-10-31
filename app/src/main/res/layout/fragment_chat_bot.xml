@@ -10,7 +10,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#E3D4D4"
+        android:background="#9C9A9A"
         tools:context=".ui.chatbot.ChatBotFragment">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -24,14 +24,15 @@
                 android:layout_marginStart="1dp"
                 android:layout_marginEnd="1dp"
                 android:layout_marginBottom="16dp"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:background="@drawable/chatbot_image"
                 android:orientation="vertical"
-                app:spanCount="3"
-                tools:listitem="@layout/message_item"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:spanCount="3"
+                tools:listitem="@layout/message_item" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textInputLayout"
@@ -62,7 +63,7 @@
                 android:layout_height="51dp"
                 android:layout_marginStart="24dp"
                 android:adjustViewBounds="false"
-                android:backgroundTint="#83FFAB00"
+                android:backgroundTint="#83F1CC82"
                 android:contentDescription="@string/send"
                 android:elevation="20dp"
                 android:scaleType="center"
@@ -71,7 +72,7 @@
                 app:layout_constraintStart_toEndOf="@+id/textInputLayout"
                 app:srcCompat="@drawable/ic_baseline_message_24" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-</FrameLayout>
+    </FrameLayout>
 
 
     </layout>
