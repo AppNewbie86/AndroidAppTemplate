@@ -16,6 +16,9 @@ import de.syntaxinstitut.dogcrounding.databinding.FragmentVideoBinding
 
 class VideoFragment : Fragment() {
     private lateinit var binding: FragmentVideoBinding
+
+
+
     // declaring a null variable for VideoView
     var simpleVideoView: VideoView? = null
     // declaring a null variable for MediaController
@@ -66,5 +69,7 @@ class VideoFragment : Fragment() {
                     "While Playing Video !!!", Toast.LENGTH_LONG).show()
             false
         }
+
+
     }
 }

@@ -1,4 +1,4 @@
-package de.syntaxinstitut.dogcrounding.ui.four
+package de.syntaxinstitut.dogcrounding.ui.menu
 
 import android.content.Intent
 import android.net.Uri
@@ -63,7 +63,7 @@ class MenuFragment : Fragment() {
         {
 
             findNavController().navigate(
-                MenuFragmentDirections.actionMenuFragmentToDogFriendFragment()
+                MenuFragmentDirections.actionMenuFragmentToDogDashFragment()
             )
         }
 

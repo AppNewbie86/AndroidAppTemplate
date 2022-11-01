@@ -11,12 +11,10 @@ import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
-import androidx.navigation.fragment.findNavController
 import com.google.android.material.appbar.MaterialToolbar
 import de.syntaxinstitut.dogcrounding.MainViewModel
 import de.syntaxinstitut.dogcrounding.adapter.DogAdapter
 import de.syntaxinstitut.dogcrounding.databinding.FragmentBoardingBinding
-import de.syntaxinstitut.dogcrounding.ui.three.DogFriendFragmentDirections
 
 class BoardingFragment : Fragment() {
 

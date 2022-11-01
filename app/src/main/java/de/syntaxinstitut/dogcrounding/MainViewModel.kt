@@ -66,7 +66,7 @@ class MainViewModel : ViewModel() {
     /* -------------------- Klassen Variablen -------------------- */
 
     /** Signal um zu signalisieren, dass zum zweiten Fragment gewechselt werden soll */
-    var navigateToFragmentTwo = MutableLiveData(false)
+    var navigateToFragmentSignUp = MutableLiveData(false)
     var navigateToFragmentChatBotFragment = MutableLiveData(false)
     var navigateToFragmentBoardingFragment = MutableLiveData(false)
     var navigateToFragmentDayCareFragment = MutableLiveData(false)
@@ -76,15 +76,15 @@ class MainViewModel : ViewModel() {
     /**
      * Mit dieser Funktion wird der Trigger ausgelöst um zum zweiten Fragment zu wechseln
      */
-    fun navigateToFragmentTwo() {
-        navigateToFragmentTwo.value = true
+    fun navigateToFragmentSignUp() {
+        navigateToFragmentSignUp.value = true
     }
 
     /**
      * Setzt alle Werte der Variablen auf ihren "Werkszustand" zurück
      */
     fun resetAllValues() {
-        navigateToFragmentTwo.value = false
+        navigateToFragmentSignUp.value = false
     }
     var navigateToFragmentDogFriendFragment = MutableLiveData(false)
 

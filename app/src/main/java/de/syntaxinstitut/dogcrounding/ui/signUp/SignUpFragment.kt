@@ -1,4 +1,4 @@
-package de.syntaxinstitut.dogcrounding.ui.two
+package de.syntaxinstitut.dogcrounding.ui.signUp
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,17 +8,17 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import de.syntaxinstitut.dogcrounding.MainViewModel
-import de.syntaxinstitut.dogcrounding.databinding.FragmentTwoBinding
+import de.syntaxinstitut.dogcrounding.databinding.FragmentSignupBinding
 
 /**
  * Fragment 2
  */
-class TwoFragment : Fragment() {
+class SignUpFragment : Fragment() {
 
     /* -------------------- Klassen Variablen -------------------- */
 
     /** Bindet das XML-View mit der Klasse um auf die Elemente zugreifen zu können */
-    private lateinit var binding: FragmentTwoBinding
+    private lateinit var binding: FragmentSignupBinding
 
     /** Das ViewModel zu diesem Fragment */
     private val viewModel: MainViewModel by activityViewModels()
@@ -36,7 +36,7 @@ class TwoFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
-        binding = FragmentTwoBinding.inflate(inflater)
+        binding = FragmentSignupBinding.inflate(inflater)
 
         return binding.root
     }
@@ -50,16 +50,16 @@ class TwoFragment : Fragment() {
         /* -------------------- UI-Interaktionen -------------------- */
 
         binding.btnSignUp.setOnClickListener {
-            viewModel.navigateToFragmentTwo()
+            viewModel.navigateToFragmentSignUp()
         }
 
         /* -------------------- Observer -------------------- */
 
         // Navigation zum zweiten Fragment
-        viewModel.navigateToFragmentTwo.observe(viewLifecycleOwner) {
+        viewModel.navigateToFragmentSignUp.observe(viewLifecycleOwner) {
             if (it) {
                 findNavController().navigate(
-                    TwoFragmentDirections.actionTwoFragmentToDogFriendFragment()
+                    SignUpFragmentDirections.actionSignUpFragmentToDogDashFragment()
                 )
 
                 viewModel.resetAllValues()

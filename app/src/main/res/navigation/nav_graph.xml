@@ -1,111 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    android:label="Home"
-    app:startDestination="@id/loginFragment">
+    app:startDestination="@id/anmeldeFragment">
 
     <fragment
-        android:id="@+id/loginFragment"
+        android:id="@+id/anmeldeFragment"
         android:name="de.syntaxinstitut.dogcrounding.ui.Anmelden.AnmeldeFragment"
-        android:label="Home"
-        tools:layout="@layout/fragment_anmelden">
+        android:label="AnmeldeFragment" >
         <action
-            android:id="@+id/action_oneFragment_to_twoFragment"
-            app:destination="@id/twoFragment" />
+            android:id="@+id/action_anmeldeFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
     </fragment>
     <fragment
-        android:id="@+id/twoFragment"
-        android:name="de.syntaxinstitut.dogcrounding.ui.two.TwoFragment"
-        android:label="Detail"
-        tools:layout="@layout/fragment_two">
-        <action
-            android:id="@+id/action_twoFragment_to_dogFriendFragment"
-            app:destination="@id/dogFriendFragment" />
-    </fragment>
+        android:id="@+id/boardingFragment"
+        android:name="de.syntaxinstitut.dogcrounding.ui.boarding.BoardingFragment"
+        android:label="BoardingFragment" />
     <fragment
-        android:id="@+id/dogFriendFragment"
-        android:name="de.syntaxinstitut.dogcrounding.ui.three.DogFriendFragment"
-        android:label="fragment_dog_friend"
-        tools:layout="@layout/fragment_dog_friend">
+        android:id="@+id/chatBotFragment"
+        android:name="ChatBotFragment"
+        android:label="ChatBotFragment" />
+    <fragment
+        android:id="@+id/dogDashFragment"
+        android:name="de.syntaxinstitut.dogcrounding.ui.communitydashboard.DogDashFragment"
+        android:label="DogDashFragment" >
         <action
-            android:id="@+id/action_dogFriendFragment_to_menuFragment"
+            android:id="@+id/action_dogDashFragment_to_menuFragment"
             app:destination="@id/menuFragment" />
-        <action android:id="@+id/action_dogFriendFragment_to_introPageBotFragment" />
         <action
-            android:id="@+id/action_dogFriendFragment_to_chatBotFragment"
+            android:id="@+id/action_dogDashFragment_to_chatBotFragment"
             app:destination="@id/chatBotFragment" />
     </fragment>
     <fragment
+        android:id="@+id/dayCareFragment"
+        android:name="de.syntaxinstitut.dogcrounding.ui.daycare.DayCareFragment"
+        android:label="DayCareFragment" />
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="de.syntaxinstitut.dogcrounding.ui.signUp.SignUpFragment"
+        android:label="SignUpFragment" >
+        <action
+            android:id="@+id/action_signUpFragment_to_dogDashFragment"
+            app:destination="@id/dogDashFragment" />
+    </fragment>
+    <fragment
         android:id="@+id/menuFragment"
-        android:name="de.syntaxinstitut.dogcrounding.ui.four.MenuFragment"
-        android:label="MenuFragment"
-        tools:layout="@layout/fragment_menu">
-
+        android:name="de.syntaxinstitut.dogcrounding.ui.menu.MenuFragment"
+        android:label="MenuFragment" >
         <action
             android:id="@+id/action_menuFragment_to_visitFragment"
             app:destination="@id/visitFragment" />
         <action
-            android:id="@+id/action_menuFragment_to_dayCareFragment"
-            app:destination="@id/dayCareFragment" />
-        <action
-            android:id="@+id/action_menuFragment_to_appSettingsFragment"
-            app:destination="@id/appSettingsFragment" />
-        <action
-            android:id="@+id/action_menuFragment_to_dogFriendFragment"
-            app:destination="@id/dogFriendFragment" />
-        <action
             android:id="@+id/action_menuFragment_to_boardingFragment"
             app:destination="@id/boardingFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_dayCareFragment"
+            app:destination="@id/dayCareFragment" />
         <action
             android:id="@+id/action_menuFragment_to_chatBotFragment"
             app:destination="@id/chatBotFragment" />
         <action
+            android:id="@+id/action_menuFragment_to_appSettingsFragment"
+            app:destination="@id/appSettingsFragment" />
+        <action
             android:id="@+id/action_menuFragment_to_videoFragment"
             app:destination="@id/videoFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/chatBotFragment"
-        android:name="ChatBotFragment"
-        android:label="fragment_chat_bot"
-        tools:layout="@layout/fragment_chat_bot" >
         <action
-            android:id="@+id/action_chatBotFragment_to_dogFriendFragment"
-            app:destination="@id/dogFriendFragment" />
+            android:id="@+id/action_menuFragment_to_dogDashFragment"
+            app:destination="@id/dogDashFragment" />
     </fragment>
     <fragment
         android:id="@+id/visitFragment"
         android:name="de.syntaxinstitut.dogcrounding.ui.visit.VisitFragment"
-        android:label="fragment_visit"
-        tools:layout="@layout/fragment_visit" />
-    <fragment
-        android:id="@+id/dayCareFragment"
-        android:name="de.syntaxinstitut.dogcrounding.ui.daycare.DayCareFragment"
-        android:label="fragment_day_care"
-        tools:layout="@layout/fragment_day_care" />
-    <fragment
-        android:id="@+id/boardingFragment"
-        android:name="de.syntaxinstitut.dogcrounding.ui.boarding.BoardingFragment"
-        android:label="Boarding_Fragment"
-        tools:layout="@layout/fragment_boarding" />
+        android:label="VisitFragment" />
     <fragment
         android:id="@+id/appSettingsFragment"
         android:name="de.syntaxinstitut.dogcrounding.ui.settings.AppSettingsFragment"
-        android:label="fragment_app_settings"
-        tools:layout="@layout/fragment_app_settings">
-        <action
-            android:id="@+id/action_appSettingsFragment_to_menuFragment"
-            app:destination="@id/menuFragment" />
-    </fragment>
-
-    <action
-        android:id="@+id/action_introPageBotFragment_to_chatBotFragment"
-        app:destination="@id/chatBotFragment" />
+        android:label="AppSettingsFragment" />
     <fragment
         android:id="@+id/videoFragment"
         android:name="de.syntaxinstitut.dogcrounding.ui.video.VideoFragment"
-        android:label="fragment_video"
-        tools:layout="@layout/fragment_video" />
+        android:label="VideoFragment" />
 </navigation>
-

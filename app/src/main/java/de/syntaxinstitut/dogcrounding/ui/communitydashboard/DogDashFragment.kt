@@ -1,7 +1,6 @@
-package de.syntaxinstitut.dogcrounding.ui.three
+package de.syntaxinstitut.dogcrounding.ui.communitydashboard
 
 import android.content.Intent
-import android.media.MediaPlayer
 import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,7 +9,6 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -18,19 +16,19 @@ import androidx.navigation.fragment.findNavController
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import de.syntaxinstitut.dogcrounding.MainViewModel
 import de.syntaxinstitut.dogcrounding.R
-import de.syntaxinstitut.dogcrounding.databinding.FragmentDogFriendBinding
+import de.syntaxinstitut.dogcrounding.databinding.FragmentDogdashBinding
 import kotlin.properties.Delegates
 
 
 /**
  * Fragment 3
  */
-class DogFriendFragment : Fragment() {
+class DogDashFragment : Fragment() {
 
     /* -------------------- Klassen Variablen -------------------- */
 
     /** Bindet das XML-View mit der Klasse um auf die Elemente zugreifen zu können */
-    private lateinit var binding: FragmentDogFriendBinding
+    private lateinit var binding: FragmentDogdashBinding
     private lateinit var button3: Button
     private lateinit var floatButton: FloatingActionButton
     private lateinit var imageView: ImageView
@@ -55,7 +53,7 @@ class DogFriendFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
-        binding = FragmentDogFriendBinding.inflate(inflater)
+        binding = FragmentDogdashBinding.inflate(inflater)
 
         return binding.root
     }
@@ -82,7 +80,7 @@ class DogFriendFragment : Fragment() {
 
         binding.chatBotButton.setOnClickListener {
             findNavController().navigate(
-                DogFriendFragmentDirections.actionDogFriendFragmentToChatBotFragment()
+                DogDashFragmentDirections.actionDogDashFragmentToChatBotFragment()
             )
 
         }
@@ -131,7 +129,7 @@ class DogFriendFragment : Fragment() {
         viewModel.navigateToFragmentMenuFragment.observe(viewLifecycleOwner) {
             if (it) {
                 findNavController().navigate(
-                    DogFriendFragmentDirections.actionDogFriendFragmentToMenuFragment()
+                    DogDashFragmentDirections.actionDogDashFragmentToMenuFragment()
                 )
 
                 viewModel.resetAllValues3()

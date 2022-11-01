@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import de.syntaxinstitut.dogcrounding.MainViewModel
-import de.syntaxinstitut.dogcrounding.databinding.FragmentOneBinding
+import de.syntaxinstitut.dogcrounding.databinding.FragmentAnmeldenBinding
 
 
 /**
@@ -21,7 +21,7 @@ class AnmeldeFragment : Fragment() {
     /* -------------------- Klassen Variablen -------------------- */
 
     /** Bindet das XML-View mit der Klasse um auf die Elemente zugreifen zu können */
-    private lateinit var binding: FragmentOneBinding
+    private lateinit var binding: FragmentAnmeldenBinding
     private lateinit var informationText: TextView
     private lateinit var layout: CardView
 
@@ -38,7 +38,7 @@ class AnmeldeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
-        binding = FragmentOneBinding.inflate(inflater)
+        binding = FragmentAnmeldenBinding.inflate(inflater)
 
         return binding.root
     }
@@ -57,16 +57,16 @@ class AnmeldeFragment : Fragment() {
         /* -------------------- UI-Interaktionen -------------------- */
 
         binding.btnFragmentOne.setOnClickListener {
-            viewModel.navigateToFragmentTwo()
+            viewModel.navigateToFragmentSignUp()
         }
 
         /* -------------------- Observer -------------------- */
 
         // Navigation zum zweiten Fragment
-        viewModel.navigateToFragmentTwo.observe(viewLifecycleOwner) {
+        viewModel.navigateToFragmentSignUp.observe(viewLifecycleOwner) {
             if (it) {
                 findNavController().navigate(
-                    OneFragmentDirections.actionOneFragmentToTwoFragment()
+                    AnmeldeFragmentDirections.actionAnmeldeFragmentToSignUpFragment()
                 )
 
                 viewModel.resetAllValues()
