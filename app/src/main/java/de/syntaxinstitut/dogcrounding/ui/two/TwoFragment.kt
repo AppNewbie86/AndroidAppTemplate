@@ -9,7 +9,6 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import de.syntaxinstitut.dogcrounding.MainViewModel
 import de.syntaxinstitut.dogcrounding.databinding.FragmentTwoBinding
-import de.syntaxinstitut.dogcrounding.ui.one.OneFragmentDirections
 
 /**
  * Fragment 2

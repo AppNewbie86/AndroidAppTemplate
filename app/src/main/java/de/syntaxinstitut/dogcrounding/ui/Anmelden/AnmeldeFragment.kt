@@ -1,7 +1,5 @@
-package de.syntaxinstitut.dogcrounding.ui.one
+package de.syntaxinstitut.dogcrounding.ui.Anmelden
 
-import android.content.Context
-import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -18,7 +16,7 @@ import de.syntaxinstitut.dogcrounding.databinding.FragmentOneBinding
 /**
  * Fragment 1
  */
-class OneFragment : Fragment() {
+class AnmeldeFragment : Fragment() {
 
     /* -------------------- Klassen Variablen -------------------- */
 
@@ -52,10 +50,6 @@ class OneFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         layout = binding.cardlayout
-
-
-
-
 
 
 

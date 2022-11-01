@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     android:label="Home"
-    app:startDestination="@id/oneFragment">
+    app:startDestination="@id/loginFragment">
 
     <fragment
-        android:id="@+id/oneFragment"
-        android:name="de.syntaxinstitut.dogcrounding.ui.one.OneFragment"
+        android:id="@+id/loginFragment"
+        android:name="de.syntaxinstitut.dogcrounding.ui.Anmelden.AnmeldeFragment"
         android:label="Home"
-        tools:layout="@layout/fragment_one">
+        tools:layout="@layout/fragment_anmelden">
         <action
             android:id="@+id/action_oneFragment_to_twoFragment"
             app:destination="@id/twoFragment" />
